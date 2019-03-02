@@ -1,4 +1,107 @@
 
+## 几种常见的排序算法
+---
+
+- [冒泡排序](javascript:;)
+
+  - 在遍历的过程中每次只比较两个元素, 如果顺序错误就进行交换
+
+```js
+function bubbleSort (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length - i - 1; j++) {
+      if (arr[j] > arr[j+1]) {
+        let temp = arr[j+1]
+        arr[j+1] = arr[j]
+        arr[j] = temp
+      }
+    }
+  }
+  return arr
+}
+```
+
+<br>
+
+- [选择排序](javascript:;)
+
+  - 以某个值在遍历的过程中进行比较, 如果碰到比其小的值则记录其index, 最后才进行交换
+
+```js
+function selectionSort (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let index = i
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[index]) {
+        index = j
+      }
+    }
+    let temp = arr[i]
+    arr[i] = arr[index]
+    arr[index] = temp
+  }
+  return arr
+}
+```
+
+<br>
+
+- [插入排序](javascript:;)
+
+  - 从第一个值开始, 如果后面的数大于前面的数则向前插入
+
+```js
+function insertionSort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    let key = arr[i]
+    let j = i - 1
+    while (j >= 0 && arr[i] > key) {
+      arr[j + 1] = arr[j]
+      j--
+    }
+    arr[j + 1] = key
+  }
+  return arr
+}
+```
+
+<br>
+
+- [快速排序](javascript:;)
+
+  - 每次都以最左边的为基准数, 左右两边同时检索, 左边比基准值大的和右边比基准值小的进行交换
+
+```js
+function quickSort (arr, left, right) {
+  if (left > right) return false
+  const base = arr[left]
+  let i = left
+  let j = right
+  // 当左边索引不等于右边索引时
+  while (i !== j) {
+    // 从右往左检索, 遇到比基准数小的则停下
+    while (arr[j] >= base && i < j) {
+      j--
+    }
+    // 从左往右检索, 遇到比基准数大的则停下
+    while (arr[i] <= base && i > j) {
+      i++
+    }
+    // 最后当左右都停下时, 两个元素交换顺序
+    let temp = arr[i]
+    arr[i] = arr[j]
+    arr[j] = temp
+  }
+  // 如果两个索引相遇, 则把基准数和当前位置交换
+  arr[left] = arr[i]
+  arr[i] = base
+  // 基准数归位之后, 先排左边在排右边
+  quickSort(arr, left, i - 1)
+  quickSort(arr, j + 1, right)
+  return arr
+}
+```
+
 <br>
 
 ## JS常用的几种继承方式
