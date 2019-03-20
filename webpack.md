@@ -1,5 +1,5 @@
 
-## npm安装
+## 实时打包编译
 ---
 
 - 安装最基础的webpack包`npm i webpack webpack-cli -D`
