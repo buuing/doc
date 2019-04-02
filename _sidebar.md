@@ -28,8 +28,8 @@
   + [+ ES6 入门笔记](js-es6)
   <!-- + [+ Js 插件](js-plugin) -->
 
-<!-- - **TypeScript** -->
-  <!-- + [+ TS 入门](ts) -->
+- **TypeScript**
+  + [+ TS 类型](ts)
 
 - **前端框架**
   + [+ vue.js 入门笔记](vue)
