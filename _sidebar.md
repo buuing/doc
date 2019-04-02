@@ -29,13 +29,13 @@
   <!-- + [+ Js 插件](js-plugin) -->
 
 - **TypeScript**
-  + [+ TS 类型](ts)
+  + [+ TS 入门笔记](ts)
 
 - **前端框架**
   + [+ vue.js 入门笔记](vue)
+  <!-- + [+ vue-cli 脚手架](vue-cli) -->
   + [+ react.js 入门笔记](react)
   + [+ mpvue 开发笔记](mpvue)
-  <!-- + [+ vue-cli 脚手架](vue-cli) -->
   + [+ 开发项目遇到的一些问题](vue-plugin)
   <!-- + [+ react 脚手架](create-react-app) -->
 
